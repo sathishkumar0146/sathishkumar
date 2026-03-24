@@ -1,0 +1,82 @@
+/* Navbar Base State */
+.navbar {
+  padding: 20px 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background: transparent;
+  border-bottom: 1px solid transparent;
+}
+
+/* Scrolled State (Triggered by Angular) */
+.navbar.scrolled {
+  padding: 12px 0;
+  background: rgba(10, 10, 15, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Logo Styling */
+.navbar-brand {
+  color: #ffffff !important;
+  letter-spacing: -1px;
+}
+
+.accent-dot {
+  color: #6c63ff;
+}
+
+/* Modern Nav Links */
+.nav-link {
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 8px 15px !important;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #fff !important;
+}
+
+/* Underline Animation */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 15px;
+  background: #6c63ff;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: calc(100% - 30px);
+}
+
+/* Resume Button Styling */
+.btn-resume {
+  background: transparent;
+  color: #6c63ff;
+  border: 1.5px solid #6c63ff;
+  padding: 8px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+.btn-resume:hover {
+  background: #6c63ff;
+  color: #fff;
+  box-shadow: 0 0 20px rgba(108, 99, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Mobile Toggler Correction */
+.custom-toggler {
+  border: none;
+  filter: invert(1); /* Makes the icon white */
+}
